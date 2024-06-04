@@ -15,6 +15,7 @@ function Header() {
             background: "#ffff",
             marginTop: '5px'
           }}
+          alt="Logo"
         />
       </div>
       <h2 style={{ marginLeft: "10px", color: "#28317a"}} onClick={() => navigate('/instructor')}>MoneyMinder</h2>

@@ -67,11 +67,42 @@ function HomePage() {
           <h2 style={{ color: "#392c44"}}>Mind Your money & Ease Expense tracking</h2>
           <div style={{ marginTop: "25px" }}>
           <p>
-              Don't Have an account? <a style={{ color: "#28317a", fontWeight: 'bold', cursor: 'pointer' }} onClick={() => {setIsModalOpen(true)}}>Register</a>
-            </p>
-            <p>
-              Have an account? <a style={{ color: "#28317a", fontWeight: 'bold', cursor: 'pointer' }} onClick={() => {setIsLoginClicked(true)}}>Login</a>
-            </p>
+  Don't Have an account? 
+  <button 
+    style={{ 
+      color: "#28317a", 
+      fontWeight: 'bold', 
+      cursor: 'pointer', 
+      background: 'none', 
+      border: 'none', 
+      padding: 0,
+      textDecoration: 'underline',
+      marginLeft: '4px'
+    }} 
+    onClick={() => { setIsModalOpen(true); }}
+  >
+    Register
+  </button>
+</p>
+<p>
+  Have an account? 
+  <button 
+    style={{ 
+      color: "#28317a", 
+      fontWeight: 'bold', 
+      cursor: 'pointer', 
+      background: 'none', 
+      border: 'none', 
+      padding: 0,
+      textDecoration: 'underline',
+      marginLeft: '4px'
+    }} 
+    onClick={() => { setIsLoginClicked(true); }}
+  >
+    Login
+  </button>
+</p>
+
           </div>
         </div>) : (
           <>
@@ -107,7 +138,7 @@ function HomePage() {
       </div>
       <div className="login-right">
         <div>
-          <img src={HomeImage} />
+          <img src={HomeImage} alt="Logo" />
         </div>
       </div>
       {isModalOpen && (

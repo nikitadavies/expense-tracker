@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api";
 import { toast } from 'react-toastify';
@@ -31,8 +31,10 @@ const CreateReceipt = () => {
           }
             try {
                 const response = await api.receipt.uploadReceipt(uploadReceipt);
-                toast.success('Receipt Uploaded Successfully!!');
-                navigate("/dashboard/receipts");
+                if(response){
+                  toast.success('Receipt Uploaded Successfully!!');
+                  navigate("/dashboard/receipts");
+                }
             } catch (error) {
                 console.error('Error uploading file:', error);
                 alert('Error uploading file.');

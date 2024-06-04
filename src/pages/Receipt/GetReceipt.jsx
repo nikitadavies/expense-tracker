@@ -5,8 +5,6 @@ import { useNavigate } from "react-router-dom";
 function GetReceipt() {
     const [receipts, setReceipts] = useState();
     const navigate = useNavigate();
-    const storedUserData = localStorage.getItem('responseData');
-    const userData = JSON.parse(storedUserData);
     const [isLoading, setIsLoading] = useState(false);
 
     async function fetchData() {
