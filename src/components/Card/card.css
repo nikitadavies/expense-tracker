@@ -1,0 +1,22 @@
+.card-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.card {
+    width: 200px; 
+    height: 200px; 
+    border: 2px solid #392c44;
+    border-radius: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer; 
+}
+
+.card-icon {
+    font-size: 30px; 
+    color: #392c44; 
+}
+
